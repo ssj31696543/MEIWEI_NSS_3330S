@@ -1,0 +1,1372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C267EF9-BEFE-45CE-B3F5-44280FF01C32}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NSS_3330S</RootNamespace>
+    <AssemblyName>NSS_3330S</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>6807f7cd</NuGetPackageImportStamp>
+    <PublishUrl>게시\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>C:\MACHINE_머이웨이8\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DBServer; LOCAL_DB; _AJIN; _DBLOSS; _nNOTEBOOK; _TEST;_ADD_N_DEG_PICKER;_nUSELD</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdvButton">
+      <HintPath>..\DLL\AdvButton.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.XCYREM2Lib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\AxInterop.XCYREM2Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.DataMan.SDK.PC, Version=5.6.3.122, Culture=neutral, PublicKeyToken=9f98866f2a3a2e78, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Cognex\DataMan\DataMan Software v6.3.1\Cognex.DataMan.SDK.PC.dll</HintPath>
+    </Reference>
+    <Reference Include="Communication, Version=6.49.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\MACHINE\Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="DionesMotion, Version=1.19.7.12, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\MACHINE\DionesMotion.dll</HintPath>
+    </Reference>
+    <Reference Include="DionesUtil, Version=1.19.7.12, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DionesUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GlassButton">
+      <HintPath>..\DLL\GlassButton.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageButton">
+      <HintPath>..\DLL\ImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.XCYREM2Lib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>DLL\Interop.XCYREM2Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="Keyboard">
+      <HintPath>..\DLL\Keyboard.dll</HintPath>
+    </Reference>
+    <Reference Include="Keyence.AutoID.SDK, Version=2.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\MACHINE\Keyence.AutoID.SDK.dll</HintPath>
+    </Reference>
+    <Reference Include="LinkMessage, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\LinkMessage.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MRG.Controls.UI">
+      <HintPath>..\DLL\MRG.Controls.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NModbus4">
+      <HintPath>..\DLL\NModbus4.dll</HintPath>
+    </Reference>
+    <Reference Include="Owf.Controls.A1Panel">
+      <HintPath>..\DLL\Owf.Controls.A1Panel.dll</HintPath>
+    </Reference>
+    <Reference Include="Owf.Controls.DigitalDisplayControl">
+      <HintPath>..\DLL\Owf.Controls.DigitalDisplayControl.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Renderers">
+      <HintPath>..\DLL\Renderers.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLiteBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\MACHINE\SQLiteBase.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.115.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\lib\net45\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.115.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.115.0\lib\net45\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.115.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.115.0\lib\net45\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ToggleSwitch">
+      <HintPath>..\DLL\ToggleSwitch.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="VncClientControlCommon, Version=6.49.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\MACHINE\VncClientControlCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="VncClientControlCommonLib, Version=6.49.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\MACHINE\VncClientControlCommonLib.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="XNetPro2, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\XNetPro2.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DB\DBDefine.cs" />
+    <Compile Include="DB\MSSql\DBExAlarmLog2.cs" />
+    <Compile Include="DB\MSSql\DBExEventLog2.cs" />
+    <Compile Include="DB\MSSql\DBExFromSaw.cs" />
+    <Compile Include="DB\MSSql\DBExITSLog2.cs" />
+    <Compile Include="DB\MSSql\DBExLogData2.cs" />
+    <Compile Include="DB\MSSql\DBExProcQtyLog2.cs" />
+    <Compile Include="DB\MSSql\DBExToHandlerAlign.cs" />
+    <Compile Include="DB\MSSql\DBExToHandlerBtmResult.cs" />
+    <Compile Include="DB\MSSql\DBExToHandlerPickerCal.cs" />
+    <Compile Include="DB\MSSql\DBExToHandlerTopAlign.cs" />
+    <Compile Include="DB\MSSql\DBExToHandlerTopResult.cs" />
+    <Compile Include="DB\MSSql\DBExToVision.cs" />
+    <Compile Include="DB\MSSql\DBEXToVisionPreAlign.cs" />
+    <Compile Include="DB\MSSql\DBExFromSorter.cs" />
+    <Compile Include="DB\SQLite\DBExAlarmData.cs" />
+    <Compile Include="DB\MSSql\DBExBase.cs" />
+    <Compile Include="DB\SQLite\DBExEventLog.cs" />
+    <Compile Include="DB\SQLite\DBExExceptionLog.cs" />
+    <Compile Include="DB\SQLite\DBExITSInfo.cs" />
+    <Compile Include="DB\SQLite\DBExITSLog.cs" />
+    <Compile Include="DB\SQLite\DBExLogData.cs" />
+    <Compile Include="DB\SQLite\DBExLotInfo.cs" />
+    <Compile Include="DB\SQLite\DBExLotLog.cs" />
+    <Compile Include="DB\SQLite\DBExMgzInfo.cs" />
+    <Compile Include="DB\SQLite\DBExChipPkInfo.cs" />
+    <Compile Include="DB\SQLite\DBExProcQtyInfo.cs" />
+    <Compile Include="DB\SQLite\DBExProcQtyLog.cs" />
+    <Compile Include="DB\SQLite\DBExSeqInfo.cs" />
+    <Compile Include="DB\SQLite\DBExStripInfo.cs" />
+    <Compile Include="DB\SQLite\DBExStripLog.cs" />
+    <Compile Include="DB\SQLite\DBExTactTime.cs" />
+    <Compile Include="DEVICE\CEYON_RFID.cs" />
+    <Compile Include="DEVICE\cKeyenceSR100.cs" />
+    <Compile Include="DEVICE\IMPIX_RFID.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DEVICE\KYC_IX.cs" />
+    <Compile Include="FORM\frmAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\frmAlarm.Designer.cs">
+      <DependentUpon>frmAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\frmAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\frmAuto.Designer.cs">
+      <DependentUpon>frmAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\frmConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\frmConfig.Designer.cs">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\frmDio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\frmDio.Designer.cs">
+      <DependentUpon>frmDio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\frmTeaching.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\frmTeaching.Designer.cs">
+      <DependentUpon>frmTeaching.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\frmLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\frmLog.Designer.cs">
+      <DependentUpon>frmLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\frmLogging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\frmLogging.Designer.cs">
+      <DependentUpon>frmLogging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\frmManual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\frmManual.Designer.cs">
+      <DependentUpon>frmManual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\frmPM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\frmPM.Designer.cs">
+      <DependentUpon>frmPM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\frmRecipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\frmRecipe.Designer.cs">
+      <DependentUpon>frmRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\frmWarningMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\frmWarningMsg.designer.cs">
+      <DependentUpon>frmWarningMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GLOBAL\Config.cs" />
+    <Compile Include="GLOBAL\ConfigMgr.cs" />
+    <Compile Include="GLOBAL\ErrMgr.cs" />
+    <Compile Include="GLOBAL\FormTextLangMgr.cs" />
+    <Compile Include="GLOBAL\Function.cs" />
+    <Compile Include="GLOBAL\FunctionMgr.cs" />
+    <Compile Include="GLOBAL\GbDef.cs" />
+    <Compile Include="GLOBAL\GbFunc.cs" />
+    <Compile Include="GLOBAL\GbSeq.cs" />
+    <Compile Include="GLOBAL\GbVar.cs" />
+    <Compile Include="GLOBAL\GlobalKeyboardHook.cs" />
+    <Compile Include="GLOBAL\InspectionDataManager.cs" />
+    <Compile Include="GLOBAL\LogKeyWordMgr.cs" />
+    <Compile Include="GLOBAL\PathMgr.cs" />
+    <Compile Include="GLOBAL\ProductManager.cs" />
+    <Compile Include="GLOBAL\RcpDevMgr.cs" />
+    <Compile Include="GLOBAL\Recipe.cs" />
+    <Compile Include="GLOBAL\RecipeMgr.cs" />
+    <Compile Include="GLOBAL\RunLib.cs" />
+    <Compile Include="GLOBAL\Safety.cs" />
+    <Compile Include="GLOBAL\SafetyMgr.cs" />
+    <Compile Include="GLOBAL\Teach.cs" />
+    <Compile Include="GLOBAL\TeachMgr.cs" />
+    <Compile Include="GLOBAL\TypeConst.cs" />
+    <Compile Include="GLOBAL\UIExtension.cs" />
+    <Compile Include="INTERFACE\IFSeqBase.cs" />
+    <Compile Include="INTERFACE\IFMgr.cs" />
+    <Compile Include="INTERFACE\IFSaw.cs" />
+    <Compile Include="INTERFACE\IFVision.cs" />
+    <Compile Include="JSON\JsonHelper.cs" />
+    <Compile Include="MOTION\MotionMgr.cs" />
+    <Compile Include="POP\ManualBladeIdKeyIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\ManualBladeIdKeyIn.Designer.cs">
+      <DependentUpon>ManualBladeIdKeyIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popAccount.Designer.cs">
+      <DependentUpon>popAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popAppLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popAppLoading.Designer.cs">
+      <DependentUpon>popAppLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popChangeCtrlStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popChangeCtrlStatus.Designer.cs">
+      <DependentUpon>popChangeCtrlStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popChipExist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popChipExist.Designer.cs">
+      <DependentUpon>popChipExist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popClrNDryManualCycleRun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popClrNDryManualCycleRun.Designer.cs">
+      <DependentUpon>popClrNDryManualCycleRun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popColorChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popColorChange.Designer.cs">
+      <DependentUpon>popColorChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popCreateDeviveFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popCreateDeviveFile.Designer.cs">
+      <DependentUpon>popCreateDeviveFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popCylinderLoop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popCylinderLoop.designer.cs">
+      <DependentUpon>popCylinderLoop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popErrorMapAlign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popErrorMapAlign.Designer.cs">
+      <DependentUpon>popErrorMapAlign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popErrorMapInsp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popErrorMapInsp.Designer.cs">
+      <DependentUpon>popErrorMapInsp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popLogin.Designer.cs">
+      <DependentUpon>popLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popLotEnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popLotEnd.Designer.cs">
+      <DependentUpon>popLotEnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popMagazineMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popMagazineMsg.designer.cs">
+      <DependentUpon>popMagazineMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popErrorMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popErrorMsg.designer.cs">
+      <DependentUpon>popErrorMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popCheckPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popCheckPassword.designer.cs">
+      <DependentUpon>popCheckPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popLoaderSeqTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popLoaderSeqTest.Designer.cs">
+      <DependentUpon>popLoaderSeqTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popLOTInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popLOTInfo.Designer.cs">
+      <DependentUpon>popLOTInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popMesErrorMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popMesErrorMsg.Designer.cs">
+      <DependentUpon>popMesErrorMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popNeonJog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popNeonJog.Designer.cs">
+      <DependentUpon>popNeonJog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popRmsRun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popRmsRun.Designer.cs">
+      <DependentUpon>popRmsRun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popTrayCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popTrayCheck.Designer.cs">
+      <DependentUpon>popTrayCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popStripExist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popStripExist.Designer.cs">
+      <DependentUpon>popStripExist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popTerminalMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popTerminalMsg.Designer.cs">
+      <DependentUpon>popTerminalMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popHostMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popHostMsg.Designer.cs">
+      <DependentUpon>popHostMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popInitialize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popInitialize.Designer.cs">
+      <DependentUpon>popInitialize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popInitializeSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popInitializeSet.Designer.cs">
+      <DependentUpon>popInitializeSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popKeypad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popKeypad.Designer.cs">
+      <DependentUpon>popKeypad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\PopLogKeyWordSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\PopLogKeyWordSetting.Designer.cs">
+      <DependentUpon>PopLogKeyWordSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popManualRun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popManualRun.Designer.cs">
+      <DependentUpon>popManualRun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popMapTransferManualCycleRun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popMapTransferManualCycleRun.Designer.cs">
+      <DependentUpon>popMapTransferManualCycleRun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popMCState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popMCState.Designer.cs">
+      <DependentUpon>popMCState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popMessageBox.Designer.cs">
+      <DependentUpon>popMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popMgrRecipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popMgrRecipe.Designer.cs">
+      <DependentUpon>popMgrRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popMgzManualCycleRun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popMgzManualCycleRun.Designer.cs">
+      <DependentUpon>popMgzManualCycleRun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popPickNPlaceManualCycleRun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popPickNPlaceManualCycleRun.Designer.cs">
+      <DependentUpon>popPickNPlaceManualCycleRun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popStripTransferManualCycleRun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popStripTransferManualCycleRun.Designer.cs">
+      <DependentUpon>popStripTransferManualCycleRun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popSubMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popSubMap.Designer.cs">
+      <DependentUpon>popSubMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popTest.Designer.cs">
+      <DependentUpon>popTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popTODO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popTODO.Designer.cs">
+      <DependentUpon>popTODO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popTrayTransferManualCycleRun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popTrayTransferManualCycleRun.Designer.cs">
+      <DependentUpon>popTrayTransferManualCycleRun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popUnitTransferManualCycleRun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popUnitTransferManualCycleRun.Designer.cs">
+      <DependentUpon>popUnitTransferManualCycleRun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popVisionManual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popVisionManual.Designer.cs">
+      <DependentUpon>popVisionManual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POP\popWarnningMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POP\popWarnningMsg.Designer.cs">
+      <DependentUpon>popWarnningMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SEQ\AUTO\procLoader_LdConv.cs" />
+    <Compile Include="SEQ\AUTO\procLoader_MzTransfer.cs" />
+    <Compile Include="SEQ\AUTO\procLoader_UldConv.cs" />
+    <Compile Include="SEQ\AUTO\procUnitDry.cs" />
+    <Compile Include="SEQ\AUTO\procTenkey.cs" />
+    <Compile Include="SEQ\AUTO\procAlwaysWork.cs" />
+    <Compile Include="SEQ\AUTO\procAutoLotEnd.cs" />
+    <Compile Include="SEQ\AUTO\procSawStripRail.cs" />
+    <Compile Include="SEQ\AUTO\procSawStrpTransfer.cs" />
+    <Compile Include="SEQ\AUTO\procStMapVisionTable.cs" />
+    <Compile Include="SEQ\AUTO\procStUldElvEmpty.cs" />
+    <Compile Include="SEQ\AUTO\procStUldElvGood.cs" />
+    <Compile Include="SEQ\AUTO\procStUldElvRework.cs" />
+    <Compile Include="SEQ\AUTO\procStUldGDTrayTable1.cs" />
+    <Compile Include="SEQ\AUTO\procStUldGDTrayTable2.cs" />
+    <Compile Include="SEQ\AUTO\procStUldRjtBoxTable.cs" />
+    <Compile Include="SEQ\AUTO\procStUldTrayTransfer.cs" />
+    <Compile Include="SEQ\AUTO\procStUnitPnP1.cs" />
+    <Compile Include="SEQ\AUTO\procStMapTransfer.cs" />
+    <Compile Include="SEQ\AUTO\procSawUnitTransfer.cs" />
+    <Compile Include="SEQ\AUTO\procStUnitPnP2.cs" />
+    <Compile Include="SEQ\AUTO\procStUldRWTrayTable.cs" />
+    <Compile Include="SEQ\AUTO\procVisionMove.cs" />
+    <Compile Include="SEQ\CYCLE\cycLoader_UldConv.cs" />
+    <Compile Include="SEQ\CYCLE\cycUnitDry.cs" />
+    <Compile Include="SEQ\CYCLE\cycLoader_LdConv.cs" />
+    <Compile Include="SEQ\CYCLE\cycLoader_MzTransfer.cs" />
+    <Compile Include="SEQ\CYCLE\cycPkgPickNPlace.cs" />
+    <Compile Include="SEQ\CYCLE\cycStripTransfer.cs" />
+    <Compile Include="SEQ\CYCLE\cycTrayTransfer.cs" />
+    <Compile Include="SEQ\CYCLE\cycUldElevator.cs" />
+    <Compile Include="SEQ\CYCLE\cycUldTrayTable.cs" />
+    <Compile Include="SEQ\CYCLE\cycMapTransfer.cs" />
+    <Compile Include="SEQ\CYCLE\cycUnitTransfer.cs" />
+    <Compile Include="SEQ\MANUAL\mnMapTableVisionView.cs" />
+    <Compile Include="SEQ\MANUAL\MnMoveCenterTopAlignMark.cs" />
+    <Compile Include="SEQ\MANUAL\MnPickerCalibration.cs" />
+    <Compile Include="SEQ\MANUAL\MnPickerZeroSet_Pickup.cs" />
+    <Compile Include="SEQ\MANUAL\mnPickerZeroSet_Place.cs" />
+    <Compile Include="SEQ\MANUAL\mnTrayVisionView.cs" />
+    <Compile Include="SEQ\MANUAL\mnVisionBallInspInterface.cs" />
+    <Compile Include="SEQ\MANUAL\mnVisionMapInspInterface.cs" />
+    <Compile Include="SEQ\MANUAL\mnVisionPreAlignInterface.cs" />
+    <Compile Include="SEQ\MANUAL\mnVisionTopAlignInterface.cs" />
+    <Compile Include="SEQ\MANUAL\mnLoaderHome.cs" />
+    <Compile Include="SEQ\MANUAL\mnCfgPosMove.cs" />
+    <Compile Include="SEQ\MANUAL\mnLoaderCycleRun.cs" />
+    <Compile Include="SEQ\MANUAL\mnMachineAllHome.cs" />
+    <Compile Include="SEQ\MANUAL\mnPickerHeadOffset.cs" />
+    <Compile Include="SEQ\MANUAL\mnTeachPosMove.cs" />
+    <Compile Include="SEQ\MANUAL\mnSorterCycleRun.cs" />
+    <Compile Include="SEQ\MANUAL\mnSawHome.cs" />
+    <Compile Include="SEQ\MANUAL\mnMultiAxisHome.cs" />
+    <Compile Include="SEQ\MANUAL\mnSawCycleRun.cs" />
+    <Compile Include="SEQ\MANUAL\mnSorterHome.cs" />
+    <Compile Include="SEQ\MANUAL\mnTrayTableOffset.cs" />
+    <Compile Include="SEQ\MANUAL\mnVisionAlign.cs" />
+    <Compile Include="SEQ\MANUAL\mnVisionTableOffset.cs" />
+    <Compile Include="SEQ\SeqBase.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="THREAD\AutoRunThread.cs" />
+    <Compile Include="THREAD\ManualRunThread.cs" />
+    <Compile Include="THREAD\LotReportLogThread.cs" />
+    <Compile Include="THREAD\StripTTLogThread.cs" />
+    <Compile Include="UC\AGauge.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UC\AGauge.Designer.cs">
+      <DependentUpon>AGauge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\BaseSubMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC\ButtonExJog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UC\CONFIG\BaseCfgPosControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC\CONFIG\CfgMotPosEditButtonEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UC\CONFIG\CfgMotPosGetButtonEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UC\CONFIG\CfgMotPosMoveButtonEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UC\DataGridViewEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UC\DrawingPaper.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\DrawingPaper.designer.cs">
+      <DependentUpon>DrawingPaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ExPropertyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UC\InputLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UC\InputPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UC\LabelExJogPos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UC\LedBulb.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UC\PosGroupMoveEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UC\RECIPE\BaseRecipePosControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC\RECIPE\RcpMotPosEditButtonEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UC\RECIPE\RcpMotPosGetButtonEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UC\RECIPE\RcpMotPosMoveButtonEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UC\Stripmap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\Stripmap.Designer.cs">
+      <DependentUpon>Stripmap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\StripmapImpl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\StripmapTools.cs" />
+    <Compile Include="UC\TEACHING\BaseTeachingPosControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC\TEACHING\TeachingMotPosEditButtonEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UC\TEACHING\TeachingMotPosGetButtonEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UC\TEACHING\TeachingMotPosMoveButtonEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UC\ucDicingCyclePosMove.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ucDicingCyclePosMove.Designer.cs">
+      <DependentUpon>ucDicingCyclePosMove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucLoaderCyclePosMove.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ucLoaderCyclePosMove.Designer.cs">
+      <DependentUpon>ucLoaderCyclePosMove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UcScrapInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UcScrapInfo.Designer.cs">
+      <DependentUpon>UcScrapInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucSorterCycleMove.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ucSorterCycleMove.Designer.cs">
+      <DependentUpon>ucSorterCycleMove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucTrayInOutWarning.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ucTrayInOutWarning.Designer.cs">
+      <DependentUpon>ucTrayInOutWarning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucInspectionMap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ucInspectionMap.Designer.cs">
+      <DependentUpon>ucInspectionMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucKeyboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC\ucKeyboard.Designer.cs">
+      <DependentUpon>ucKeyboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucManualOutputButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ucManualOutputButton.Designer.cs">
+      <DependentUpon>ucManualOutputButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucNumericKeyInputButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UC\ucNumericUpDown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ucNumericUpDown.Designer.cs">
+      <DependentUpon>ucNumericUpDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucPickerPadInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ucPickerPadInfo.Designer.cs">
+      <DependentUpon>ucPickerPadInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucProcessInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ucProcessInfo.Designer.cs">
+      <DependentUpon>ucProcessInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucServoStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ucServoStatus.Designer.cs">
+      <DependentUpon>ucServoStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucSubMap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ucSubMap.Designer.cs">
+      <DependentUpon>ucSubMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucSvManualJog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ucSvManualJog.Designer.cs">
+      <DependentUpon>ucSvManualJog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucUldTrayMap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ucUldTrayMap.Designer.cs">
+      <DependentUpon>ucUldTrayMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucUserSelectButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ucUserSelectButton.Designer.cs">
+      <DependentUpon>ucUserSelectButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucVacInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ucVacInfo.Designer.cs">
+      <DependentUpon>ucVacInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucVacList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ucVacList.Designer.cs">
+      <DependentUpon>ucVacList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucVacuumAirView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ucVacuumAirView.Designer.cs">
+      <DependentUpon>ucVacuumAirView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\usUnLoaderCyclePosMove.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\usUnLoaderCyclePosMove.Designer.cs">
+      <DependentUpon>usUnLoaderCyclePosMove.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FORM\frmAlarm.resx">
+      <DependentUpon>frmAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\frmAuto.resx">
+      <DependentUpon>frmAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\frmConfig.resx">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\frmDio.resx">
+      <DependentUpon>frmDio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\frmTeaching.resx">
+      <DependentUpon>frmTeaching.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\frmLog.resx">
+      <DependentUpon>frmLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\frmLogging.resx">
+      <DependentUpon>frmLogging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\frmManual.resx">
+      <DependentUpon>frmManual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\frmPM.resx">
+      <DependentUpon>frmPM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\frmRecipe.resx">
+      <DependentUpon>frmRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\frmWarningMsg.resx">
+      <DependentUpon>frmWarningMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\ManualBladeIdKeyIn.resx">
+      <DependentUpon>ManualBladeIdKeyIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popAccount.resx">
+      <DependentUpon>popAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popAppLoading.resx">
+      <DependentUpon>popAppLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popChangeCtrlStatus.resx">
+      <DependentUpon>popChangeCtrlStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popCheckPassword.resx">
+      <DependentUpon>popCheckPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popChipExist.resx">
+      <DependentUpon>popChipExist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popClrNDryManualCycleRun.resx">
+      <DependentUpon>popClrNDryManualCycleRun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popColorChange.resx">
+      <DependentUpon>popColorChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popCreateDeviveFile.resx">
+      <DependentUpon>popCreateDeviveFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popCylinderLoop.resx">
+      <DependentUpon>popCylinderLoop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popErrorMapAlign.resx">
+      <DependentUpon>popErrorMapAlign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popErrorMapInsp.resx">
+      <DependentUpon>popErrorMapInsp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popLogin.resx">
+      <DependentUpon>popLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popLotEnd.resx">
+      <DependentUpon>popLotEnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popMagazineMsg.resx">
+      <DependentUpon>popMagazineMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popErrorMsg.resx">
+      <DependentUpon>popErrorMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popLoaderSeqTest.resx">
+      <DependentUpon>popLoaderSeqTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popLOTInfo.resx">
+      <DependentUpon>popLOTInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popMesErrorMsg.resx">
+      <DependentUpon>popMesErrorMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popNeonJog.resx">
+      <DependentUpon>popNeonJog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popRmsRun.resx">
+      <DependentUpon>popRmsRun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popTrayCheck.resx">
+      <DependentUpon>popTrayCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popStripExist.resx">
+      <DependentUpon>popStripExist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popTerminalMsg.resx">
+      <DependentUpon>popTerminalMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popHostMsg.resx">
+      <DependentUpon>popHostMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popInitialize.resx">
+      <DependentUpon>popInitialize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popInitializeSet.resx">
+      <DependentUpon>popInitializeSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popKeypad.resx">
+      <DependentUpon>popKeypad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\PopLogKeyWordSetting.resx">
+      <DependentUpon>PopLogKeyWordSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popManualRun.resx">
+      <DependentUpon>popManualRun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popMapTransferManualCycleRun.resx">
+      <DependentUpon>popMapTransferManualCycleRun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popMCState.resx">
+      <DependentUpon>popMCState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popMessageBox.resx">
+      <DependentUpon>popMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popMgrRecipe.resx">
+      <DependentUpon>popMgrRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popMgzManualCycleRun.resx">
+      <DependentUpon>popMgzManualCycleRun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popPickNPlaceManualCycleRun.resx">
+      <DependentUpon>popPickNPlaceManualCycleRun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popStripTransferManualCycleRun.resx">
+      <DependentUpon>popStripTransferManualCycleRun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popSubMap.resx">
+      <DependentUpon>popSubMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popTest.resx">
+      <DependentUpon>popTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popTODO.resx">
+      <DependentUpon>popTODO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popTrayTransferManualCycleRun.resx">
+      <DependentUpon>popTrayTransferManualCycleRun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popUnitTransferManualCycleRun.resx">
+      <DependentUpon>popUnitTransferManualCycleRun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popVisionManual.resx">
+      <DependentUpon>popVisionManual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POP\popWarnningMsg.resx">
+      <DependentUpon>popWarnningMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\BaseSubMenu.resx">
+      <DependentUpon>BaseSubMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\DrawingPaper.resx">
+      <DependentUpon>DrawingPaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\PosGroupMoveEx.resx">
+      <DependentUpon>PosGroupMoveEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\RECIPE\BaseRecipePosControl.resx">
+      <DependentUpon>BaseRecipePosControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\StripmapImpl.resx">
+      <DependentUpon>StripmapImpl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\TEACHING\BaseTeachingPosControl.resx">
+      <DependentUpon>BaseTeachingPosControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ucDicingCyclePosMove.resx">
+      <DependentUpon>ucDicingCyclePosMove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ucLoaderCyclePosMove.resx">
+      <DependentUpon>ucLoaderCyclePosMove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UcScrapInfo.resx">
+      <DependentUpon>UcScrapInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ucSorterCycleMove.resx">
+      <DependentUpon>ucSorterCycleMove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ucTrayInOutWarning.lg.resx">
+      <DependentUpon>ucTrayInOutWarning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ucTrayInOutWarning.resx">
+      <DependentUpon>ucTrayInOutWarning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ucInspectionMap.resx">
+      <DependentUpon>ucInspectionMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ucKeyboard.resx">
+      <DependentUpon>ucKeyboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ucManualOutputButton.resx">
+      <DependentUpon>ucManualOutputButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ucNumericUpDown.resx">
+      <DependentUpon>ucNumericUpDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ucPickerPadInfo.resx">
+      <DependentUpon>ucPickerPadInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ucProcessInfo.resx">
+      <DependentUpon>ucProcessInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ucServoStatus.resx">
+      <DependentUpon>ucServoStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ucSubMap.resx">
+      <DependentUpon>ucSubMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ucSvManualJog.resx">
+      <DependentUpon>ucSvManualJog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ucUldTrayMap.resx">
+      <DependentUpon>ucUldTrayMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ucUserSelectButton.resx">
+      <DependentUpon>ucUserSelectButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ucVacInfo.resx">
+      <DependentUpon>ucVacInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ucVacList.resx">
+      <DependentUpon>ucVacList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ucVacuumAirView.resx">
+      <DependentUpon>ucVacuumAirView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\usUnLoaderCyclePosMove.resx">
+      <DependentUpon>usUnLoaderCyclePosMove.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackGround_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor_icon&amp;32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hand_2_icon&amp;32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard_past_icon&amp;32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cogs_icon&amp;32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list_bullets_icon&amp;32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop_watch_icon&amp;32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc_edit_icon&amp;32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\on-off_icon&amp;48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_icon&amp;48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_icon&amp;481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_icon&amp;321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_icon&amp;32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\align_just_icon&amp;32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3x3_grid_icon&amp;32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notepad_2_icon&amp;32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\br_prev_icon&amp;32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\br_next_icon&amp;32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_open_p3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\align_left_icon&amp;32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_Gray_50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteFile_Gray_50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_Gray_100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Password_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MZ_INFO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VISION_TABLE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\055_p3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game_pad_icon&amp;32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game_pad_icon&amp;48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_icon&amp;32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_minus_icon&amp;24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cogs_icon&amp;321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrench_plus_icon&amp;48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spechbubble_icon&amp;48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spechbubble_icon&amp;481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_right_icon&amp;24.png" />
+    <None Include="Resources\arrow_left_icon&amp;24.png" />
+    <None Include="Resources\zoom_icon&amp;24.png" />
+    <None Include="Resources\pin_map_icon&amp;24.png" />
+    <None Include="Resources\cursor_V_split_icon&amp;32.png" />
+    <None Include="Resources\share_2_icon&amp;32.png" />
+    <None Include="Resources\doc_export_icon&amp;32.png" />
+    <None Include="Resources\br_next_icon&amp;481.png" />
+    <None Include="Resources\br_next_icon&amp;322.png" />
+    <None Include="Resources\share_icon&amp;32.png" />
+    <Content Include="CheckList.txt" />
+    <Content Include="History.txt" />
+    <None Include="Resources\Icon\cc_mono_icon_set\cc\black\png\playback_next_icon&amp;24.png" />
+    <None Include="Resources\Plasma_Move_Ver2_Y_Move_Right_Start_Up.png" />
+    <None Include="Resources\Plasma_Move_Ver2_Y_Move_Left_Start_Up.png" />
+    <None Include="Resources\Plasma_Move_Ver2_X_Move_Left_Start_Up.png" />
+    <None Include="Resources\Plasma_Move_Ver2_X_Move_Right_Start_Up.png" />
+    <None Include="Resources\Plasma_Move_Ver2_X_Move_Right_Start.png" />
+    <None Include="Resources\Plasma_Move_Ver2_X_Move_Left_Start.png" />
+    <None Include="Resources\Plasma_Move_Ver2_Y_Move_Left_Start.png" />
+    <None Include="Resources\CleanerImage.JPG" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\info_24x24.png" />
+    <None Include="Resources\info_16x16.png" />
+    <None Include="Resources\Flag_of_South_Korea.svg.png" />
+    <Content Include="ToDo.txt" />
+    <None Include="Resources\2x2_grid_icon&amp;48.png" />
+    <Content Include="Resources\AccountModify_Gray_48.png" />
+    <Content Include="Resources\app_window_shell_icon&amp;48.png" />
+    <Content Include="Resources\bell_icon&amp;32.png" />
+    <None Include="Resources\br_down_icon&amp;32.png" />
+    <None Include="Resources\br_next_icon&amp;321.png" />
+    <Content Include="Resources\br_next_icon&amp;48.png" />
+    <Content Include="Resources\br_prev_icon&amp;48.png" />
+    <Content Include="Resources\Checked_100.png" />
+    <Content Include="Resources\Checked_25.png" />
+    <Content Include="Resources\Checked_50.png" />
+    <Content Include="Resources\CloseWindow_100.png" />
+    <Content Include="Resources\DoorClose.png" />
+    <Content Include="Resources\DoorOpen1.png" />
+    <Content Include="Resources\DoorOpen2.png" />
+    <Content Include="Resources\emergency1.png" />
+    <Content Include="Resources\emergency2.png" />
+    <Content Include="Resources\EMOOFF.png" />
+    <Content Include="Resources\EMOON1.png" />
+    <Content Include="Resources\EMOON2.png" />
+    <None Include="Resources\game_pad_icon&amp;321.png" />
+    <None Include="Resources\game_pad_icon&amp;322.png" />
+    <None Include="Resources\home_icon&amp;32.png" />
+    <Content Include="Resources\home_icon&amp;48.png" />
+    <None Include="Resources\JOG\icons8-down-20.png" />
+    <None Include="Resources\JOG\icons8-down-20_1.png" />
+    <None Include="Resources\JOG\icons8-left-20.png" />
+    <None Include="Resources\JOG\icons8-right-20.png" />
+    <None Include="Resources\JOG\icons8-rotate-left-20_1.png" />
+    <None Include="Resources\JOG\icons8-rotate-right-20_1.png" />
+    <None Include="Resources\JOG\icons8-up-20.png" />
+    <None Include="Resources\JOG\icons8-up-20_1.png" />
+    <None Include="Resources\import_icon&amp;48.png" />
+    <None Include="Resources\indent_increase_icon&amp;48.png" />
+    <Content Include="Resources\key_icon&amp;32.png" />
+    <None Include="Resources\lock_open_icon&amp;48.png" />
+    <None Include="Resources\lock_open_icon&amp;32.png" />
+    <None Include="Resources\magic_wand_2_icon&amp;48.png" />
+    <Content Include="Resources\NewFile_Gray_50.png" />
+    <None Include="Resources\padlock_open_icon&amp;32.png" />
+    <Content Include="Resources\password_white.png" />
+    <None Include="Resources\playback_ff_icon&amp;32.png" />
+    <Content Include="Resources\playback_next_icon&amp;48.png" />
+    <Content Include="Resources\playback_pause_icon&amp;48.png" />
+    <Content Include="Resources\playback_play_icon&amp;48.png" />
+    <Content Include="Resources\playback_reload_icon&amp;48.png" />
+    <Content Include="Resources\playback_stop_icon&amp;48.png" />
+    <Content Include="Resources\rnd_br_next_icon&amp;32.png" />
+    <None Include="Resources\TABLE_CAL_POS.png" />
+    <Content Include="Resources\UnChecked_100.png" />
+    <Content Include="Resources\UnChecked_25.png" />
+    <Content Include="Resources\UnChecked_50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\cc_mono_icon_set\cc\black\png\padlock_closed_icon&amp;48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\cc_mono_icon_set\cc\black\png\round_plus_icon&amp;48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\cc_mono_icon_set\cc\black\png\round_minus_icon&amp;48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\cc_mono_icon_set\cc\black\png\doc_lines_icon&amp;48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UC\MANUAL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\build\net45\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\build\net45\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>이 프로젝트는 이 컴퓨터에 없는 NuGet 패키지를 참조합니다. 해당 패키지를 다운로드하려면 NuGet 패키지 복원을 사용하세요. 자세한 내용은 http://go.microsoft.com/fwlink/?LinkID=322105를 참조하세요. 누락된 파일은 {0}입니다.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\build\net45\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\build\net45\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
